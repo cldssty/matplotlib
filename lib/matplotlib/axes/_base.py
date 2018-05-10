@@ -1335,7 +1335,8 @@ class _AxesBase(martist.Artist):
         """
         if adjustable == 'box-forced':
             warnings.warn("The 'box-forced' keyword argument is deprecated"
-                          " since 2.2.", cbook.mplDeprecation, stacklevel=2)
+                          " since 2.2.", cbook.mplDeprecation, 
+                          stacklevel=2)
         if adjustable not in ('box', 'datalim', 'box-forced'):
             raise ValueError("argument must be 'box', or 'datalim'")
         if share:
@@ -2287,7 +2288,8 @@ class _AxesBase(martist.Artist):
 
         if x is None and y is None:
             if tight is not True:
-                warnings.warn('ignoring tight=%r in get mode' % (tight,), stacklevel=2)
+                warnings.warn('ignoring tight=%r in get mode' % (tight,), 
+                              stacklevel=2)
             return self._xmargin, self._ymargin
 
         if x is not None:
