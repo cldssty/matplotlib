@@ -1567,10 +1567,12 @@ end"""
                     'Trapped': check_trapped}
         for k in self.infoDict:
             if k not in keywords:
-                warnings.warn('Unknown infodict keyword: %s' % k, stacklevel=2)
+                warnings.warn('Unknown infodict keyword: %s' % k, 
+                              stacklevel=2)
             else:
                 if not keywords[k](self.infoDict[k]):
-                    warnings.warn('Bad value for infodict keyword %s' % k, stacklevel=2)
+                    warnings.warn('Bad value for infodict keyword %s' % k, 
+                                  stacklevel=2)
 
         self.infoObject = self.reserveObject('info')
         self.writeObject(self.infoObject, self.infoDict)
